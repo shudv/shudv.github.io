@@ -1,2 +1,2 @@
-# trivialme
-Source code and content for my website 
+# My personal website
+This repository contains content displayed on my personal website.
