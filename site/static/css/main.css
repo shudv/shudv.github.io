@@ -9,9 +9,17 @@ body {
     background: linear-gradient(120deg, #f9ebfe, #e8eaf6, #e9e7fb, #e9e7fb, #e9e7fb);
 }
 
+.social-svg {
+    width: 20px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
 .post-title-single {
     color: #3949ab;
-    font-weight: 600;
+    font-weight: 500;
     font-size: x-large;
 }
 
@@ -253,8 +261,8 @@ ul {
 }
 
 .footer {
-	text-align: right;
-	font-size: 0.75em;
+	text-align: center;
+	font-size: 1em;
 	color: #999;
 	border-top: 1px solid #dddddd;
     padding: 20px 0;
