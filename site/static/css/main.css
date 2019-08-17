@@ -1,20 +1,27 @@
 body {
+    text-align: justify;
     min-height: 100vh;
-    font-family: "ubuntu", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 	color: #333;
 	line-height: 1.6;
     font-size: 16px;
-    background: linear-gradient(120deg, #f0efee, #efeee6, #edeceb, #ebded7, #e0d5cf);
+    background: linear-gradient(120deg, #f9ebfe, #e8eaf6, #e9e7fb, #e9e7fb, #e9e7fb);
 }
 
-.title {
+.post-title-single {
+    color: #3949ab;
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.post-title-index {
+    color: #3949ab;
     font-weight: 500;
     font-size: larger;
 }
 
 a, a:hover {
-    color: #a00;
     text-decoration: none;
 }
 
@@ -56,27 +63,7 @@ textarea {
     resize: vertical
 }
 
-blockquote {
-    margin-left: 1rem;
-    font-style: italic;
-    font-size: 1.4rem;
-    font-family: Georgia,bitstream charter,serif;
-    border-left: 3px solid;
-    border-color: #a00;
-    padding-left: 20px
-}
-
-blockquote cite {
-    font-size: 70%;
-    opacity: .8
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 h1,h2,h3,h4,h5,h6 {
-    font-family: raleway,sans-serif;
     line-height: 1.2;
     color: #333;
     font-weight: 100
@@ -243,7 +230,7 @@ ul {
 .post .post-header .meta,
 .list .posts .post .meta {
 	font-size: 0.725rem;
-	color: #999;
+	color: #555;
 	margin-bottom: 4px;
 }
 

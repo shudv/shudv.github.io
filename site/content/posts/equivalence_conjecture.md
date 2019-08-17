@@ -1,6 +1,6 @@
 ---
-title: "Equivalence Conjecture"
-date: 2019-08-16T17:23:47+05:30
+title: "Equivalence conjecture"
+date: 2019-08-16
 draft: true
 ---
 

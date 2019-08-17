@@ -1,6 +1,6 @@
 ---
-title: "A Box That Contains Itself"
-date: 2019-08-16T17:23:45+05:30
+title: "A box that contains itself"
+date: 2019-08-16
 draft: true
 ---
 

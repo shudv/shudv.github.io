@@ -10,12 +10,12 @@
 				{{- range .Data.Pages -}}
 				<div class="post">
 					<div class="meta">{{ dateFormat "Jan 2, 2006" .Date }}</div>
-					<a class="title" href="{{ .RelPermalink }}">{{.Title}}</a> &mdash;
+					<a class="post-title-index" href="{{ .RelPermalink }}">{{.Title}}</a> <br>
 					<span class="description">
 						{{ if isset .Params "description" }}
 							{{ .Description }}
-						{{ else if gt (len .RawContent) 150 }}
-							{{ slicestr .RawContent 0 150 }}...
+						{{ else if gt (len .RawContent) 250 }}
+							{{ slicestr .RawContent 0 250 }}...
 						{{ else }}
 							{{ .RawContent }}
 						{{ end }}
