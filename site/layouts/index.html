@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
 {{ partial "header.html" . }}
+
 <body>
 	<div class="container wrapper">
-		 {{ partial "head.html" . }}
+		{{ partial "head.html" . }}
 
 		<div class="recent-posts section">
 			<div class="posts">
 				{{- range .Data.Pages -}}
 				<div class="post">
 					<div class="meta">{{ dateFormat "Jan 2, 2006" .Date }}</div>
-					<a class="post-title-index" href="{{ .RelPermalink }}">{{.Title}}</a> <br>
-					<span class="description">
-						{{ if isset .Params "description" }}
-							{{ .Description }}
-						{{ else if gt (len .RawContent) 250 }}
-							{{ slicestr .RawContent 0 250 }}...
+					<a class="post-title font-size-larger" href="{{ .RelPermalink }}">{{.Title}}</a>
+					<div class="description justify">
+						{{ if gt (len .RawContent) 200 }}
+						{{ slicestr .RawContent 0 200 }}...
 						{{ else }}
-							{{ .RawContent }}
+						{{ .RawContent }}
 						{{ end }}
-					</span>
-                </div>
+					</div>
+				</div>
 				{{- end -}}
 			</div>
 		</div>
 	</div>
 	{{ partial "footer.html" . }}
 </body>
+
 </html>
