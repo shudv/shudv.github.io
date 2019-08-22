@@ -1,6 +1,5 @@
 ---
 title: "Division by zero"
-date: 2019-08-16
 draft: true
 ---
 

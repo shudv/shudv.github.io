@@ -10,11 +10,10 @@
 			<div class="posts">
 				{{- range .Data.Pages -}}
 				<div class="post">
-					<div class="meta">{{ dateFormat "Jan 2, 2006" .Date }}</div>
-					<a class="post-title font-size-larger" href="{{ .RelPermalink }}">{{.Title}}</a>
-					<div class="description justify">
-						{{ if gt (len .RawContent) 200 }}
-						{{ slicestr .RawContent 0 200 }}...
+					<a class="post-title" href="{{ .RelPermalink }}">{{.Title}}</a>
+					<div class="preview justify">
+						{{ if gt (len .RawContent) 1000 }}
+						{{ slicestr .RawContent 0 1000 }}...
 						{{ else }}
 						{{ .RawContent }}
 						{{ end }}

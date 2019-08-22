@@ -1,6 +1,5 @@
 ---
-title: "Equivalence conjecture"
-date: 2019-08-16
+title: "Science + Religion"
 draft: true
 ---
 
