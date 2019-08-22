@@ -1,5 +1,6 @@
 :root {
     --background: #fff;
+    --background-transparent: #fff0;
     --title-text-color: #333;
     --main-text-color: #444;
     --lowlight-color: #ddd;
@@ -31,10 +32,25 @@ body {
     color: var(--title-text-color);
 }
 
-.preview {
+article {
     margin-top: 8px;
     max-height: 150px;
     overflow: hidden;
+    text-align: justify;
+    position: relative;
+}
+
+article:after {
+    content  : "";
+    position : absolute;
+    width    : 100%;
+    height   : 4em;
+    bottom   : 0;
+    left     : 0;
+    pointer-events   : none;
+    background: -moz-linear-gradient(top, var(--background-transparent), var(--background));  
+	background: -webkit-linear-gradient(top, var(--background-transparent), var(--background));  
+	background: linear-gradient(to bottom, var(--background-transparent), var(--background));  
 }
 
 .justify {
@@ -120,14 +136,4 @@ audio,canvas,img,video {
 	body {
 		font-size: 14px;
 	}
-}
-
-@media (prefers-dark-interface) {
-    root {
-        --background: #263238;
-        --title-text-color: #eee;
-        --main-text-color: #ddd;
-        --lowlight-color: #888;
-        --highlight-text-color: #d8effd;
-    }
 }

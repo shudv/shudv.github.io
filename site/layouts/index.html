@@ -11,13 +11,13 @@
 				{{- range .Data.Pages -}}
 				<div class="post">
 					<a class="post-title" href="{{ .RelPermalink }}">{{.Title}}</a>
-					<div class="preview justify">
-						{{ if gt (len .RawContent) 1000 }}
-						{{ slicestr .RawContent 0 1000 }}...
-						{{ else }}
-						{{ .RawContent }}
-						{{ end }}
-					</div>
+					<article>
+							{{ if gt (len .RawContent) 1000 }}
+							{{ slicestr .RawContent 0 1000 }}...
+							{{ else }}
+							{{ .RawContent }}
+							{{ end }}
+					</article>
 				</div>
 				{{- end -}}
 			</div>
