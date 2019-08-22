@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+
+<body>
+	<div class="container wrapper">
+		{{ partial "head.html" . }}
+
+		<div class="recent-posts section">
+			<div class="posts">
+				{{- range .Data.Pages -}}
+				<div class="post">
+					<a class="post-title" href="{{ .RelPermalink }}">{{.Title}}</a>
+					<article>
+							{{ if gt (len .RawContent) 1000 }}
+							{{ slicestr .RawContent 0 1000 }}...
+							{{ else }}
+							{{ .RawContent }}
+							{{ end }}
+					</article>
+				</div>
+				{{- end -}}
+			</div>
+		</div>
+	</div>
+	{{ partial "footer.html" . }}
+</body>
+
+</html>
