@@ -37,7 +37,6 @@ cd ..
 git checkout master
 
 # Copy staged built files to root
-rm -r !(".gitignore")
 cp -rf $TEMP_DIR/ .
 
 # Push files to remote
