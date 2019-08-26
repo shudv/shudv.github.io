@@ -2,9 +2,13 @@
 TEMP_DIR=`mktemp -d`
 CURRENT_DIR=`pwd`
 
-echo $TEMP_DIR
 if [[ ! $CURRENT_DIR == *site  ]]; then
   echo "Publish command must be executed from the \"site\" directory"
+  exit 1
+fi
+
+if [[ -z $(git status -s)  ]]; then
+  echo "Please commit all your changes before publishing"
   exit 1
 fi
 
