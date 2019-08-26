@@ -1,5 +1,5 @@
 ---
-title: "A box that contains itself"
+title: "Infinite truth"
 date: 2018-03-18
 draft: true
 ---

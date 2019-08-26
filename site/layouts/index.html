@@ -10,13 +10,10 @@
 			<div class="posts">
 				{{- range .Data.Pages -}}
 				<div class="post">
+					<div class="post-date">{{ dateFormat "Jan 2, 2006" .Date }}</div>
 					<a class="post-title" href="{{ .RelPermalink }}">{{.Title}}</a>
 					<article>
-							{{ if gt (len .RawContent) 1000 }}
-							{{ slicestr .RawContent 0 1000 }}...
-							{{ else }}
-							{{ .RawContent }}
-							{{ end }}
+						{{ .RawContent }}
 					</article>
 				</div>
 				{{- end -}}

@@ -6,6 +6,7 @@
 		{{ partial "head.html" . }}
 
 		<div class="post-header">
+			<div class="post-date">{{ dateFormat "Jan 2, 2006" .Date }}</div>
 			<h1 class="post-title">{{ .Title }}</h1>
 		</div>
 
