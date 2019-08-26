@@ -2,20 +2,24 @@
 TEMP_DIR=`mktemp -d`
 CURRENT_DIR=`pwd`
 
-echo $TEMP_DIR
 if [[ ! $CURRENT_DIR == *site  ]]; then
   echo "Publish command must be executed from the \"site\" directory"
   exit 1
 fi
 
+if [[ -n $(git status -s -uall)  ]]; then
+  echo "Please commit all your changes before publishing"
+  exit 1
+fi
+
 BRANCH=`git rev-parse --abbrev-ref HEAD`
-cp -rf public/ $TEMP_DIR
-cd ..
-git checkout master
-cp -rf $TEMP_DIR/ .
-git add .
-git commit -a -m "publish"
-git push
+# cp -rf public/ $TEMP_DIR
+# cd ..
+# git checkout master
+# p -rf $TEMP_DIR/ .
+# git add .
+# git commit -a -m "publish"
+# git push
 git checkout $BRANCH
 cd site
 
