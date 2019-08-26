@@ -1,5 +1,6 @@
 ---
 title: "Running burnout equation"
+date: 2018-03-18
 draft: true
 ---
 

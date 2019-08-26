@@ -26,6 +26,7 @@ body {
 }
 
 .post-title {
+    margin-top: 0px;
     font-weight: 500;
     font-size: xx-large;
     line-height: 1.2;
@@ -34,7 +35,7 @@ body {
 
 article {
     margin-top: 8px;
-    max-height: 150px;
+    max-height: 125px;
     overflow: hidden;
     text-align: justify;
     position: relative;
@@ -51,6 +52,10 @@ article:after {
     background: -moz-linear-gradient(top, var(--background-transparent), var(--background));  
 	background: -webkit-linear-gradient(top, var(--background-transparent), var(--background));  
 	background: linear-gradient(to bottom, var(--background-transparent), var(--background));  
+}
+
+.post-date {
+    color: #888;
 }
 
 .justify {
