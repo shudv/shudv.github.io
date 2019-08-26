@@ -13,13 +13,13 @@ if [[ -n $(git status -s -uall)  ]]; then
 fi
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
-# cp -rf public/ $TEMP_DIR
-# cd ..
-# git checkout master
-# p -rf $TEMP_DIR/ .
-# git add .
-# git commit -a -m "publish"
-# git push
+cp -rf public/ $TEMP_DIR
+cd ..
+git checkout master
+cp -rf $TEMP_DIR/ .
+git add .
+git commit -a -m "publish"
+git push
 git checkout $BRANCH
 cd site
 
