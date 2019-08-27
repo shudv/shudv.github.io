@@ -1,8 +1,9 @@
 :root {
     --background: #fff;
     --background-transparent: #fff0;
-    --title-text-color: #333;
-    --main-text-color: #444;
+    --text-color1: #333;
+    --text-color2: #444;
+    --text-color3: #888;
     --lowlight-color: #ddd;
     --highlight-text-color: #d8effd;
 }
@@ -12,17 +13,15 @@ body {
     font-family: 'Literata', sans-serif;
     font-weight: 300;
 	line-height: 1.6;
-    font-size: 15px;
     background: var(--background);
-    color: var(--main-text-color);
+    color: var(--text-color2);
 }
 
 .social-svg {
     width: 20px;
-    stroke: var(--main-text-color);
     stroke-linecap: round;
     stroke-linejoin: round;
-    fill: none;
+    filter: invert(56%) sepia(6%) saturate(15%) hue-rotate(332deg) brightness(95%) contrast(85%);
 }
 
 .post-title {
@@ -30,7 +29,7 @@ body {
     font-weight: 500;
     font-size: xx-large;
     line-height: 1.2;
-    color: var(--title-text-color);
+    color: var(--text-color1);
 }
 
 article {
@@ -39,6 +38,7 @@ article {
     overflow: hidden;
     text-align: justify;
     position: relative;
+    font-size: 1.1em;
 }
 
 article:after {
@@ -55,11 +55,13 @@ article:after {
 }
 
 .post-date {
-    color: #888;
+    color: var(--text-color3);
+    margin-bottom: 2px;
 }
 
-.justify {
+.post-content {
     text-align: justify;
+    font-size: 1.2em;
 }
 
 a, a:hover {
@@ -94,12 +96,10 @@ audio,canvas,img,video {
     max-width: 800px
 }
 
-
 .pre {
     margin-bottom: 0;
 	margin-top: 0;
 	padding: 20px;
-	background-color: #FAFAFA !important;
 }
 
 .wrapper {
@@ -112,7 +112,7 @@ audio,canvas,img,video {
 }
 
 .posts .post {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .post .post-header {
@@ -141,4 +141,16 @@ audio,canvas,img,video {
 	body {
 		font-size: 14px;
 	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+        --background: #222;
+        --background-transparent: #2220;
+        --text-color1: #eee;
+        --text-color2: #ddd;
+        --text-color3: #888;
+        --lowlight-color: #333;
+        --highlight-text-color: #b6dddc;
+    }
 }
