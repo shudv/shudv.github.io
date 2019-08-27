@@ -146,7 +146,7 @@ audio,canvas,img,video {
 @media (prefers-color-scheme: dark) {
 	:root {
         --background: #222;
-        --background-transparent: #0000;
+        --background-transparent: #2220;
         --text-color1: #eee;
         --text-color2: #ddd;
         --text-color3: #888;
