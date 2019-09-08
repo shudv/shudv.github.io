@@ -54,6 +54,13 @@ article:after {
 	background: linear-gradient(to bottom, var(--background-transparent), var(--background));  
 }
 
+
+.post-content {
+    font-family: "Raleway", sans-serif;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
 .read-more {
     font-family: "Merriweather", sans-serif;
     color: var(--text-color3);
@@ -71,12 +78,6 @@ article:after {
 .post-date {
     color: var(--text-color3);
     margin-bottom: 2px;
-}
-
-.post-content {
-    font-family: "Raleway", sans-serif;
-    text-align: justify;
-    font-size: 1.1em;
 }
 
 a {
@@ -135,17 +136,11 @@ pre {
 }
 
 .posts .post {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
-
-.post .post-header {
-	margin-top: 30px;
-}
-
 
 .footer {
 	text-align: center;
-	font-size: 1em;
 	border-top: 1px solid var(--lowlight-color);
     padding: 20px 0;
     margin-top: 40px;
@@ -154,6 +149,7 @@ pre {
 @media (max-width: 767px) {
 	body {
         padding: 40px;
+        font-size: 16px;
     }
     .container {
         padding-top: 10px;
@@ -162,8 +158,18 @@ pre {
 
 @media (max-width: 480px) {
 	body {
-        font-size: 15px;
+        font-size: 14px;
         padding: 20px;
+    }
+    .container {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 240px) {
+	body {
+        font-size: 12px;
+        padding: 15px;
     }
     .container {
         padding-top: 10px;
