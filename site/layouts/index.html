@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
-{{ partial "header.html" . }}
+{{ partial "head.html" . }}
 
 <body>
 	<div class="container wrapper">
-		{{ partial "head.html" . }}
-
 		<div class="recent-posts section">
 			<div class="posts">
-				{{- range .Data.Pages -}}
+				{{- range (.Site.RegularPages.ByParam "index").Reverse -}}
 				<div class="post">
-					<div class="post-date">{{ dateFormat "Jan 2, 2006" .Date }}</div>
 					<a class="post-title" href="{{ .RelPermalink }}">{{.Title}}</a>
 					<article>
-						{{ .RawContent }}
+						{{ .Content }}
 					</article>
+					<a class="read-more" href="{{ .RelPermalink }}">Read more...</a>
 				</div>
 				{{- end -}}
 			</div>

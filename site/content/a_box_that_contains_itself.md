@@ -1,6 +1,5 @@
 ---
 title: "A box that contains itself"
-date: 2019-07-18
 draft: true
 ---
 
