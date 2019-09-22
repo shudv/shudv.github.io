@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+<body>
+	<div class="container wrapper post">
+		<div class="post-title">{{ .Title }}</div>
+		<div class="post-content">
+			{{ .Content }}
+		</div>
+	</div>
+	{{ partial "footer.html" . }}
+</body>
+</html>

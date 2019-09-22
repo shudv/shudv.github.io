@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+
+<body>
+	<div class="container wrapper">
+			{{- range (.Site.RegularPages.ByParam "index").Reverse -}}
+			<div class="post">
+				<a class="post-title" href="{{ .RelPermalink }}">{{.Title}}</a>
+				<div class="post-content preview">
+					{{ .Content }}
+				</div>
+				<a class="read-more" href="{{ .RelPermalink }}">Read more...</a>
+			</div>
+			{{- end -}}
+	</div>
+	{{ partial "footer.html" . }}
+</body>
+
+</html>
