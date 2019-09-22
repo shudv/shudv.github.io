@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Learning by guided discovery | Tiny Blobs</title><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+	
+	 
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+	<link href="http://allfont.net/allfont.css?fonts=baskerville-light" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+	<div class="container wrapper post">
+		<div class="post-title">Learning by guided discovery</div>
+		<div class="post-content">
+			<p>Some more context to offset the code block which does not look very good in the index.</p>
+
+<ol>
+<li>Set the context and establish what is already known and believed to be true.</li>
+<li>Ask a question that can be derived from already eastablished context.</li>
+<li>Try and answer the question.</li>
+<li>Add answer to already established context.</li>
+<li>Repeat until satisfied.</li>
+</ol>
+
+<pre>
+context = setup what is already known
+learn()
+{
+    while (not satisfied)
+    {
+        // dsdds
+        questions = ask_questions_from(context);
+        foreach question of questions
+        {
+            answer = try_answer(question);
+            append(context, answer);
+        }
+    }
+}
+</pre>
+
+		</div>
+	</div>
+	<div class="footer wrapper">
+	<a href="mailto:shubd3@outlook.com" title="Email"><img class="social-svg" src="/svg/mail.svg"/></a>&nbsp;
+</div>
+
+</body>
+</html>
