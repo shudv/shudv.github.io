@@ -6,11 +6,11 @@ if [[ -n $(git status -s -uall)  ]]; then
   exit 1
 fi
 
-# Build resources
-hugo
-
 # Record branch name so that we can switch back to it later
 BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+# Build resources
+hugo
 
 # Create a temp directory to stage built files
 TEMP_DIR=`mktemp -d`
