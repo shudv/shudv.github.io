@@ -4,10 +4,12 @@ draft: false
 index: 999
 ---
 
-Since quite some time I have been maintaining a notebook with ideas that cross my mind.
+Like many people, I rejoice wondering about the meaning and purpose of life *(it's probably not 42)* and thinking about connections between things that don't seem connected on the surface. Unlike many people, I never wrote anything down. Then one day I decided to give it a try and started recording my thoughts in a diary. After not very long, it became one of my most personal possessions. 
 
-<img src="/images/notebook.jpg" alt="notebook" style="width:100%"/>
+<center>
+    <img src="/images/notebook-sketch.jpg" alt="notebook" style="width:80%"/>
+</center>
 
-These are ideas that are directly influenced by the miniscule amount of knowledge that I have and hence are, by all means, *trivial* in nature. Hence my only intention with this website is to put forward a (hopefully) unique perspective on topics that I am interested in. The topics can range from science to philosophy and religion.
+One immediate revelation for me after I started writing things down was that how stupid, un-remarkeable or just plain wrong most of my ideas were. Things that seemed compelling in a passing moment, turned lifeless just on the second or third review. This new learning along with a few others eventually led to this website -- where these ideas can be subjected to more pairs of eyes and a wider gamut of review and criticism.
 
-If you find anything interesting here that you would like to discuss further, please drop an email to me by clicking the mail icon below.
+This website, **a digital mirror of my diary**, is a collecion of all these ideas which will hopefully be interesting to at least some people out there. If you have any suggestion or criticsm, please drop me an email by clicking the mail icon below.

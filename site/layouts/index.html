@@ -4,19 +4,15 @@
 
 <body>
 	<div class="container wrapper">
-		<div class="recent-posts section">
-			<div class="posts">
-				{{- range (.Site.RegularPages.ByParam "index").Reverse -}}
-				<div class="post">
-					<a class="post-title" href="{{ .RelPermalink }}">{{.Title}}</a>
-					<article>
-						{{ .Content }}
-					</article>
-					<a class="read-more" href="{{ .RelPermalink }}">Read more...</a>
+			{{- range (.Site.RegularPages.ByParam "index").Reverse -}}
+			<div class="post">
+				<a class="post-title" href="{{ .RelPermalink }}">{{.Title}}</a>
+				<div class="post-content preview">
+					{{ .Content }}
 				</div>
-				{{- end -}}
+				<a class="read-more" href="{{ .RelPermalink }}">Read more...</a>
 			</div>
-		</div>
+			{{- end -}}
 	</div>
 	{{ partial "footer.html" . }}
 </body>

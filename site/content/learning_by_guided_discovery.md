@@ -4,13 +4,14 @@ index: 1
 draft: false
 ---
 
+Some more context to offset the code block which does not look very good in the index.
+
 1. Set the context and establish what is already known and believed to be true.
 1. Ask a question that can be derived from already eastablished context.
 1. Try and answer the question.
 1. Add answer to already established context.
 1. Repeat until satisfied.
 
-Some more context to offset the code block which does not look very good in the index.
 
 <pre>
 context = setup what is already known
