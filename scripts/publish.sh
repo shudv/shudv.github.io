@@ -1,18 +1,18 @@
 #!/bin/bash    
 
-# Do not allow publishing if there are uncommitted changes
 if [[ -n $(git status -s -uall)  ]]; then
   echo "Please commit all your changes before publishing!"
   exit 1
 fi
 
-# Record branch name so that we can switch back to it later
+echo "Recording branch name so that we can switch back to it later"
 BRANCH=`git rev-parse --abbrev-ref HEAD`
+echo "Current branch is $BRANCH"
 
-# Build resources
+echo "Building website files"
 hugo
 
-# Create a temp directory to stage built files
+echo "Creating a temp directory to stage built files"
 TEMP_DIR=`mktemp -d`
 function cleanup_temp_directory {      
   rm -rf "$TEMP_DIR"
@@ -20,18 +20,19 @@ function cleanup_temp_directory {
 # Register cleanup function to be called on the EXIT
 trap cleanup_temp_directory EXIT
 
-# Stage currently built files in the temp directory
+echo "Staging built files"
 cp -rf public/ $TEMP_DIR
 
+echo "Checkout master"
 git checkout master
 
-# Copy staged built files to root
+echo "Bringing over staged built files"
 cp -rf $TEMP_DIR/ .
 
-# Push files to remote
+echo "Committing changes"
 git add .
 git commit -a -m "publish"
-echo "Latest content published to local master."
+echo "Latest content committed to local master."
 
-# Checkout initial branch and cd to main directory
+echo "Checkout $BRANCH"
 git checkout $BRANCH
